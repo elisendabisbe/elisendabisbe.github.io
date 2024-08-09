@@ -5,21 +5,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Elisenda Bisbe Molin - Psicòloga General Sanitària</title>
     <link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Onuava&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
-        <img src="images/logo.png" alt="Logo de Elisenda Bisbe Molin">
-        <h1>Elisenda Bisbe Molin</h1>
-        <p>Psicòloga General Sanitària - Col·legiada 04068 al COP</p>
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo de Elisenda Bisbe Molin">
+        </div>
+        <div class="language-menu">
+            <a href="?lang=ca">Català</a> | <a href="?lang=es">Español</a>
+            <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        </div>
+        <nav id="nav-menu" class="nav-hidden">
+            <ul>
+                <li><a href="#about">Sobre mi</a></li>
+                <li><a href="#services">Serveis</a></li>
+                <li><a href="#contact">Contacte</a></li>
+            </ul>
+        </nav>
     </header>
 
     <section id="about">
         <h2>Sobre mi</h2>
+		<p>ELISENDA BISBE MOLIN</p>
+		<p>Psicòloga General Sanitària - Col·legiada nº 04068 al COP</p>
         <p>Biografia per desenvolupar</p>
     </section>
 
     <section id="services">
-        <h2>Serveis i Mètodes de Treball</h2>
+        <h2>Com treballo</h2>
         <p>Per desenvolupar</p>
     </section>
 
@@ -46,6 +60,17 @@
             <p>Consulta enviada correctament. ✔</p>
         </div>
     </section>
+	
+	<script>
+        function toggleMenu() {
+            var menu = document.getElementById('nav-menu');
+            if (menu.classList.contains('nav-hidden')) {
+                menu.classList.remove('nav-hidden');
+            } else {
+                menu.classList.add('nav-hidden');
+            }
+        }
+    </script>
 
     <script>
         const form = document.querySelector('form');
