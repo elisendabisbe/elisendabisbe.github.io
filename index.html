@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elisenda Bisbe Molin - Psicòloga General Sanitària</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <img src="images/logo.png" alt="Logo de Elisenda Bisbe Molin">
+        <h1>Elisenda Bisbe Molin</h1>
+        <p>Psicòloga General Sanitària - Col·legiada 04068 al COP</p>
+    </header>
+
+    <section id="about">
+        <h2>Sobre mi</h2>
+        <p>Biografia per desenvolupar</p>
+    </section>
+
+    <section id="services">
+        <h2>Serveis i Mètodes de Treball</h2>
+        <p>Per desenvolupar</p>
+    </section>
+
+    <section id="contact">
+        <h2>Contacte</h2>
+        <p>Email: <a href="mailto:atencio.psicologia.eb@gmail.com">atencio.psicologia.eb@gmail.com</a></p>
+        <p>Telèfon: 644173190</p>
+        <p>Ubicació: Carrer de Sant Pere, 57, 17220 Sant Feliu de Guíxols, Girona</p>
+
+        <form action="https://formspree.io/f/{your-id}" method="POST">
+            <label for="name">Nom:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Correu electrònic:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="message">Missatge:</label>
+            <textarea id="message" name="message" required></textarea>
+
+            <button type="submit">Enviar</button>
+        </form>
+
+        <div id="confirmation-message" style="display: none;">
+            <p>Consulta enviada correctament. ✔</p>
+        </div>
+    </section>
+
+    <script>
+        const form = document.querySelector('form');
+        const confirmationMessage = document.getElementById('confirmation-message');
+
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            // Aquí puedes implementar el envío con JavaScript, si se usa un servicio externo.
+            confirmationMessage.style.display = 'block';
+            form.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
